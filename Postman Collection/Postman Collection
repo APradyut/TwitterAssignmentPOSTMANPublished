@@ -1,0 +1,104 @@
+{
+	"info": {
+		"name": "TwitterAssignment",
+		"_postman_id": "c0b7b8d4-d3e5-246e-9458-05648f3f3373",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:44351/api/users/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Username\" : \"Adarsh2\",\n\t\"Password\": \"Adarsh\",\n\t\"Email\": \"adarsh.pradyut@gmail.com\",\n\t\"Phone\": \"9962256589\",\n\t\"Name\" : \"Adarsh Pradyut\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				},
+				"description": "This is the sample for accessing the Register Endpoint."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:44351/api/values",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IkFkYXJzaCIsImV4cCI6MTU0MDc1NDQ2NCwiaXNzIjoiQ2VudHJhbENvbnRyb2xsZXIiLCJhdWQiOiJVc2VycyJ9.hEP3BvPeXoQilmZ5-9JEcoZL0GUtZliCk-rjwRVcW_o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/api/values",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"values"
+					]
+				},
+				"description": "This endpoint only checks whether the login endpoint gave a proper token. This also verifies the Session controlling is possible in this implementation."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:44351/api/users/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Username\":\"Adarsh\",\n\t\"Password\" : \"Adarsh\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
